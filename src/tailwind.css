@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1e1e1e; /* VS Code dark background */
+  --color-foreground: #d4d4d4; /* VS Code dark text color */
+  --color-accent: #569cd6; /* VS Code dark accent color */
+  --color-comment: #6a9955; /* VS Code dark comment color */
+  --color-string: #ce9178; /* VS Code dark string color */
+  --color-keyword: #569cd6; /* VS Code dark keyword color */
+  --color-number: #b5cea8; /* VS Code dark number color */
+  --color-function: #dcdcaa; /* VS Code dark function color */
+}
+
+.accordion {
+  @apply w-full max-w-md mx-auto;
+}
+
+.accordion-item {
+  @apply border-b border-gray-200;
+}
+
+.accordion-header {
+  @apply flex justify-between items-center p-4 cursor-pointer bg-gray-100 border border-gray-200 rounded-md mb-2;
+}
+
+.accordion-header.active {
+  @apply bg-gray-200;
+}
+
+.accordion-title {
+  @apply text-lg font-bold;
+}
+
+.accordion-icon {
+  @apply text-xl transition-transform duration-300;
+}
+
+.accordion-icon::before {
+  content: "▶";
+}
+
+.accordion-icon.active::before {
+  content: "▼";
+}
+
+.accordion-content {
+  @apply max-h-0 overflow-hidden transition-max-height duration-300 p-4;
+}
+
+.accordion-content.active {
+  @apply max-h-96; /* Adjust this value based on your content */
+}
