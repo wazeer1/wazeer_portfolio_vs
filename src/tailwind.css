@@ -43,9 +43,9 @@
   content: "▼";
 }
 
-.accordion-content {
+/* .accordion-content {
   @apply max-h-0 overflow-hidden transition-max-height duration-300 p-4;
-}
+} */
 
 .accordion-content.active {
   @apply max-h-96; /* Adjust this value based on your content */
